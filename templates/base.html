@@ -1,0 +1,46 @@
+<!--<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Application</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Mon Application</h1>
+        <nav>
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="/users">Utilisateurs</a></li>
+                <li class="nav-item"><a class="nav-link" href="/addUser">Ajouter un utilisateur</a></li>
+            </ul>
+        </nav>
+        <div class="sub_content">
+            {% block sub_content %}
+            {% endblock %}
+        </div>
+        <div class="footer">
+            <p>© 2024 Mon Application</p>
+        </div>
+    </div>
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!--<link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">--> 
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Panel</h1>
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
+

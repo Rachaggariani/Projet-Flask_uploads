@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Add User</h2>
+
+<form method="POST" enctype="multipart/form-data"> <!-- Assurez-vous que enctype est défini -->
+    {{ form.hidden_tag() }} <!-- Pour les champs cachés, si nécessaire -->
+
+    <div class="form-group">
+        {{ form.username.label(class="control-label") }}
+        {{ form.username(class="form-control") }}
+    </div>
+
+    <div class="form-group">
+        {{ form.email.label(class="control-label") }}
+        {{ form.email(class="form-control") }}
+    </div>
+
+    <div class="form-group">
+        {{ form.password.label(class="control-label") }}
+        {{ form.password(class="form-control") }}
+    </div>
+
+   
+
+    <button type="submit" class="btn btn-primary">Add User</button>
+</form>
+
+{% if form.errors %}
+<div class="alert alert-danger mt-3">
+    <ul>
+        {% for field, errors in form.errors.items() %}
+            {% for error in errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+{% endblock %}
